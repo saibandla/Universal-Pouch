@@ -13,79 +13,91 @@
 
 @implementation MenuViewController
 
-
-- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
+UIColor *selectedColor;
+NSArray *section1data;
+int slectedIndex=-1;
+-(void)viewDidLoad
 {
-    // configure the destination view controller:
-    if ( [sender isKindOfClass:[UITableViewCell class]] )
-    {
-        UILabel* c = [(SWUITableViewCell *)sender label];
-        UINavigationController *navController = segue.destinationViewController;
-//        ColorViewController* cvc = [navController childViewControllers].firstObject;
-//        if ( [cvc isKindOfClass:[ColorViewController class]] )
-//        {
-//            cvc.color = c.textColor;
-//            cvc.text = c.text;
-//        }
-    }
+    selectedColor=[UIColor colorWithRed:0.271778 green:0.724866 blue:0.67773 alpha:1];
+    
+    NSString *plistpath=[[NSBundle mainBundle] pathForResource:@"dataList" ofType:@"plist"];
+    
+    section1data=[NSArray arrayWithContentsOfFile:plistpath];
+
 }
-
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section==1)
+    {
+        slectedIndex=indexPath.row;
+    UINavigationController *mainnav=[[UIStoryboard storyboardWithName:@"Main" bundle:nil]instantiateViewControllerWithIdentifier:@"mainnav"];
+    mainnav.navigationItem.title=@"News";
+    [self.revealViewController pushFrontViewController:mainnav animated:YES];
+    }
+    [tableView reloadData];
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    int lenght;
+    if(section==0)
+        lenght=1;
+    else
+        lenght=section1data.count;
+    
+    return lenght;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
      static NSString *CellIdentifier = @"Cell";
-    switch (indexPath.row) {
-        case 0:
-            CellIdentifier = @"Cell";
-            break;
-        case 1:
-            CellIdentifier = @"Cell2";
-            break;
-        case 2:
-            CellIdentifier = @"Cell3";
-            break;
-        case 3:
-            CellIdentifier = @"Cell4";
-            break;
-        case 4:
-            CellIdentifier = @"Cell5";
-            break;
-        case 5:
-            CellIdentifier = @"Cell6";
-            break;
-        case 6:
-            CellIdentifier = @"Cell7";
-            break;
-
-        default:
-            break;
-    }
-   
-
-    
-
+    static NSString *LogoCellIdentifier=@"Logo";
+    if(indexPath.section==1)
+    {
     SWUITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
+     if(indexPath.row== slectedIndex)
+     {
+         cell.label.textColor=selectedColor;
+         cell.selectionIndicator.hidden=NO;
+     }
+//    cell.label.textColor=selectedColor;
+        NSDictionary *dic=[section1data objectAtIndex:indexPath.row];
+        cell.label.text=[dic objectForKey:@"topicname"];
+        cell.iconimage.image=[UIImage imageNamed:[dic objectForKey:@"icon"]];
     return cell;
+    }
+    else if(indexPath.section==0)
+    {
+        UITableViewCell *cell= [tableView dequeueReusableCellWithIdentifier: LogoCellIdentifier forIndexPath: indexPath];
+        return cell;
+    }
+    return nil;
 }
 - (CGFloat)tableView:(UITableView *)tableView
 estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section==1)
+    return 44;
+    else if(indexPath.section==0)
+        return 81;
     return 44;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+{
+    return 5;
+}
 - (CGFloat)tableView:(UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section==1)
+        return 44;
+    else if(indexPath.section==0)
+        return 81;
     return 44;
 }
 #pragma mark state preservation / restoration

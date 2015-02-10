@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "entertainment.png"
+      "filename" : "favrouites.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "entertainment-1.png"
+      "filename" : "favrouites-1.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "entertainment-2.png"
+      "filename" : "favrouites-2.png"
     }
   ],
   "info" : {

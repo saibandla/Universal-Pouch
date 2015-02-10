@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self customSetup];
+    [self.navigationItem setTitle:self.navigationController.navigationItem.title];
     // Do any additional setup after loading the view, typically from a nib.
 }
 - (void)customSetup

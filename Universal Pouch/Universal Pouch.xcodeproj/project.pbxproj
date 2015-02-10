@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3803DB1A8A424A00B9CF40 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3803DA1A8A424A00B9CF40 /* BaseTableViewController.m */; };
+		6C3803DD1A8A4E9900B9CF40 /* dataList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C3803DC1A8A4E9900B9CF40 /* dataList.plist */; };
+		6C3803DF1A8A5A4500B9CF40 /* _80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C3803DE1A8A5A4500B9CF40 /* _80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg */; };
 		6C7E2C921A88FDDC001606D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E2C911A88FDDC001606D7 /* main.m */; };
 		6C7E2C951A88FDDC001606D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E2C941A88FDDC001606D7 /* AppDelegate.m */; };
 		6C7E2C981A88FDDC001606D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7E2C971A88FDDC001606D7 /* ViewController.m */; };
@@ -31,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C3803D91A8A424A00B9CF40 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		6C3803DA1A8A424A00B9CF40 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		6C3803DC1A8A4E9900B9CF40 /* dataList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dataList.plist; sourceTree = "<group>"; };
+		6C3803DE1A8A5A4500B9CF40 /* _80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "_80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg"; sourceTree = "<group>"; };
 		6C7E2C8C1A88FDDC001606D7 /* Universal Pouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Universal Pouch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C7E2C901A88FDDC001606D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C7E2C911A88FDDC001606D7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,12 +104,15 @@
 				6C7E2C941A88FDDC001606D7 /* AppDelegate.m */,
 				6C7E2C961A88FDDC001606D7 /* ViewController.h */,
 				6C7E2C971A88FDDC001606D7 /* ViewController.m */,
+				6C3803D91A8A424A00B9CF40 /* BaseTableViewController.h */,
+				6C3803DA1A8A424A00B9CF40 /* BaseTableViewController.m */,
 				6C7E2CC41A89218E001606D7 /* LatestStoriesViewController.h */,
 				6C7E2CC51A89218E001606D7 /* LatestStoriesViewController.m */,
 				6C7E2C991A88FDDC001606D7 /* Main.storyboard */,
 				6C7E2CC71A892257001606D7 /* NewsViewController.h */,
 				6C7E2CC81A892257001606D7 /* NewsViewController.m */,
 				6C7E2C9C1A88FDDC001606D7 /* Images.xcassets */,
+				6C3803DE1A8A5A4500B9CF40 /* _80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg */,
 				6C7E2C9E1A88FDDC001606D7 /* LaunchScreen.xib */,
 				6C7E2CC01A8906CC001606D7 /* SWRevealViewController */,
 				6C7E2C8F1A88FDDC001606D7 /* Supporting Files */,
@@ -115,6 +125,7 @@
 			children = (
 				6C7E2CBD1A890502001606D7 /* MenuViewController.h */,
 				6C7E2CBE1A890502001606D7 /* MenuViewController.m */,
+				6C3803DC1A8A4E9900B9CF40 /* dataList.plist */,
 				6C7E2C901A88FDDC001606D7 /* Info.plist */,
 				6C7E2C911A88FDDC001606D7 /* main.m */,
 			);
@@ -227,8 +238,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3803DF1A8A5A4500B9CF40 /* _80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg in Resources */,
 				6C7E2C9B1A88FDDC001606D7 /* Main.storyboard in Resources */,
 				6C7E2CA01A88FDDC001606D7 /* LaunchScreen.xib in Resources */,
+				6C3803DD1A8A4E9900B9CF40 /* dataList.plist in Resources */,
 				6C7E2C9D1A88FDDC001606D7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +266,7 @@
 				6C7E2C921A88FDDC001606D7 /* main.m in Sources */,
 				6C7E2CBF1A890502001606D7 /* MenuViewController.m in Sources */,
 				6C7E2CC61A89218E001606D7 /* LatestStoriesViewController.m in Sources */,
+				6C3803DB1A8A424A00B9CF40 /* BaseTableViewController.m in Sources */,
 				6C7E2CC91A892257001606D7 /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +458,7 @@
 				6C7E2CB11A88FDDC001606D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C7E2CB21A88FDDC001606D7 /* Build configuration list for PBXNativeTarget "Universal PouchTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +467,7 @@
 				6C7E2CB41A88FDDC001606D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
