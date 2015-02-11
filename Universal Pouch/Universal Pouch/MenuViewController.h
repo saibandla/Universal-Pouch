@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
-@interface SWUITableViewCell : UITableViewCell
+@interface SWUITableViewCell : UITableViewCell<UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *iconimage;
 @property (nonatomic,weak) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIImageView *selectionIndicator;

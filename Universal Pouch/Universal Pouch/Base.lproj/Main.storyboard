@@ -48,6 +48,7 @@
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topStories" translatesAutoresizingMaskIntoConstraints="NO" id="rqx-hr-WaA">
                                             <rect key="frame" x="18" y="2" width="26" height="41"/>
+                                            <color key="tintColor" red="0.27177772080000001" green="0.72486584600000004" blue="0.6777302248" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Top Stories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpX-1g-dbx">
                                             <rect key="frame" x="52" y="11" width="154" height="21"/>
@@ -113,19 +114,19 @@
         <scene sceneID="Odo-iR-P7x">
             <objects>
                 <tableViewController id="zel-AK-1ai" customClass="BaseTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="164" sectionHeaderHeight="22" sectionFooterHeight="22" id="jqw-ts-BTh">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" id="jqw-ts-BTh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="164" id="bse-Y9-zTm">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="164" id="bse-Y9-zTm" customClass="CustomeCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bse-Y9-zTm" id="7VV-Mx-rrP">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="_80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="uzg-Nt-gbE">
                                             <rect key="frame" x="0.0" y="1" width="320" height="102"/>
-                                            <color key="backgroundColor" red="0.8784313725490196" green="0.20392156862745098" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.98212594696969702" green="0.22812103596589034" blue="0.34703165953841852" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tributes to tipper truck death girl" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNq-X1-zM9">
                                             <rect key="frame" x="8" y="113" width="197" height="47"/>
@@ -141,6 +142,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="thumbimage" destination="uzg-Nt-gbE" id="kVg-Ez-caj"/>
+                                    <outlet property="timeLabel" destination="7wR-aX-2bM" id="W2x-bI-wkh"/>
+                                    <outlet property="titleLabel" destination="PNq-X1-zM9" id="d2v-FJ-LoK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -158,7 +164,32 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hid-bK-ZbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1258" y="1275"/>
+            <point key="canvasLocation" x="1311" y="1281"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CyT-ik-AJf">
+            <objects>
+                <viewController id="s0T-BH-f5z" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vgr-Nc-19P"/>
+                        <viewControllerLayoutGuide type="bottom" id="EM6-Pa-Tdw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f78-T0-T4E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="leY-Ri-Dno">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLs-xT-gGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696" y="1281"/>
         </scene>
     </scenes>
     <resources>

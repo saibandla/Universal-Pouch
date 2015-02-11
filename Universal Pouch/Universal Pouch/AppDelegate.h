@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate,NSXMLParserDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+@property(strong,nonatomic)NSMutableArray *latestStotes;
+@property(strong,nonatomic)NSMutableArray *topStotes;
+@property(strong,nonatomic)NSMutableArray *techStotes;
 @end
 
