@@ -21,6 +21,7 @@
 		6C80492A1A8B152F00906F91 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8049291A8B152F00906F91 /* Reachability.m */; };
 		6C80492C1A8B1EF700906F91 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C80492B1A8B1EF700906F91 /* libsqlite3.dylib */; };
 		6C80492F1A8B2D6A00906F91 /* CustomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C80492E1A8B2D6A00906F91 /* CustomeCell.m */; };
+		6C8049321A8B4AA600906F91 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8049311A8B4AA600906F91 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		6C80492B1A8B1EF700906F91 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6C80492D1A8B2D6A00906F91 /* CustomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomeCell.h; sourceTree = "<group>"; };
 		6C80492E1A8B2D6A00906F91 /* CustomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomeCell.m; sourceTree = "<group>"; };
+		6C8049301A8B4AA600906F91 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		6C8049311A8B4AA600906F91 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				6C3803DA1A8A424A00B9CF40 /* BaseTableViewController.m */,
 				6C80492D1A8B2D6A00906F91 /* CustomeCell.h */,
 				6C80492E1A8B2D6A00906F91 /* CustomeCell.m */,
+				6C8049301A8B4AA600906F91 /* DetailsViewController.h */,
+				6C8049311A8B4AA600906F91 /* DetailsViewController.m */,
 				6C7E2C991A88FDDC001606D7 /* Main.storyboard */,
 				6C7E2C9C1A88FDDC001606D7 /* Images.xcassets */,
 				6C3803DE1A8A5A4500B9CF40 /* _80907728_b614a758-081d-487c-885d-3ea43aa9204d.jpg */,
@@ -266,6 +271,7 @@
 				6C80492F1A8B2D6A00906F91 /* CustomeCell.m in Sources */,
 				6C80492A1A8B152F00906F91 /* Reachability.m in Sources */,
 				6C3803DB1A8A424A00B9CF40 /* BaseTableViewController.m in Sources */,
+				6C8049321A8B4AA600906F91 /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="1311" y="1281"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="CyT-ik-AJf">
             <objects>
-                <viewController id="s0T-BH-f5z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detilsView" id="s0T-BH-f5z" customClass="DetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vgr-Nc-19P"/>
                         <viewControllerLayoutGuide type="bottom" id="EM6-Pa-Tdw"/>
@@ -186,6 +186,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="detilsWeb" destination="leY-Ri-Dno" id="0eO-7z-ETL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLs-xT-gGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

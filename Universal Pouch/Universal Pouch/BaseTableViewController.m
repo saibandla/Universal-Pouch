@@ -9,6 +9,7 @@
 
 #import "BaseTableViewController.h"
 #import "SWRevealViewController.h"
+#import "DetailsViewController.h"
 #import "AppDelegate.h"
 #import "CustomeCell.h"
 @interface BaseTableViewController ()
@@ -64,7 +65,11 @@ int sectionCount;
     }
     }
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden=NO;
 
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -158,7 +163,33 @@ int sectionCount;
     
     // TODO call whatever function you need to visually restore
 }
-
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *thumurl;
+    if(indexPath.section==0)
+    {
+        if(sectionCount==3)
+        {
+            thumurl=[[app.latestStotes objectAtIndex:indexPath.row] objectForKey:@"link"];
+        }
+        else
+        {
+            thumurl=[[mainArray objectAtIndex:indexPath.row] objectForKey:@"link"];
+        }
+    }
+    else if(indexPath.section==1)
+    {
+        thumurl=[[app.topStotes objectAtIndex:indexPath.row] objectForKey:@"link"];
+    }
+    else if(indexPath.section==2)
+    {
+        thumurl=[[app.techStotes objectAtIndex:indexPath.row] objectForKey:@"link"];
+    }
+    NSURL *url1=[NSURL URLWithString:[thumurl stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] ];
+    DetailsViewController *detils=[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"detilsView"];
+    detils.webUrl=url1;
+    [self.navigationController pushViewController:detils animated:YES];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     // Configure the cell...
